@@ -25,9 +25,20 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen flex flex-col`}
       >
-        {children}
+        <header className="flex items-center justify-between p-4 border-b">
+          <div className="text-2xl font-bold">BarberX</div>
+          <a href="#" className="text-sm font-medium hover:underline">
+            Reservar
+          </a>
+        </header>
+        <main className="flex-grow flex flex-col">
+          {children}
+        </main>
+        <footer className="p-4 text-center text-sm text-zinc-500">
+          &copy; {new Date().getFullYear()} BarberX. Todos los derechos reservados.
+        </footer>
       </body>
     </html>
   );
