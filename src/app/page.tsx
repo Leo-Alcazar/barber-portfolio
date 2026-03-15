@@ -4,8 +4,12 @@ import Gallery from "@/components/Gallery";
 export default function Home() {
   return (
     <div className="flex flex-grow flex-col w-full">
-      <Hero />
-      <Gallery />
+      <section id="inicio">
+        <Hero />
+      </section>
+      <section id="galeria">
+        <Gallery />
+      </section>
     </div>
   );
 }

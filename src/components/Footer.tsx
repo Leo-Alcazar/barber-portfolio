@@ -1,3 +1,5 @@
+"use client";
+
 import Link from "next/link";
 import { Facebook, Instagram, MapPin, Phone, Twitter } from "lucide-react";
 
@@ -19,13 +21,13 @@ export default function Footer() {
           <h3 className="font-semibold text-lg text-white">Enlaces Rápidos</h3>
           <ul className="space-y-2 text-zinc-400">
             <li>
-              <Link href="#" className="hover:text-white transition-colors">Inicio</Link>
+              <Link href="#inicio" className="hover:text-white transition-colors">Inicio</Link>
             </li>
             <li>
               <Link href="#" className="hover:text-white transition-colors">Servicios</Link>
             </li>
             <li>
-              <Link href="#" className="hover:text-white transition-colors">Galería</Link>
+              <Link href="#galeria" className="hover:text-white transition-colors">Galería</Link>
             </li>
           </ul>
         </div>
@@ -45,15 +47,15 @@ export default function Footer() {
           </ul>
           
           <div className="flex space-x-4 mt-4">
-            <a href="#" className="text-zinc-400 hover:text-white transition-colors">
+            <a href="#" onClick={(e) => e.preventDefault()} className="text-zinc-400 hover:text-white transition-colors">
               <Instagram className="w-6 h-6" />
               <span className="sr-only">Instagram</span>
             </a>
-            <a href="#" className="text-zinc-400 hover:text-white transition-colors">
+            <a href="#" onClick={(e) => e.preventDefault()} className="text-zinc-400 hover:text-white transition-colors">
               <Facebook className="w-6 h-6" />
               <span className="sr-only">Facebook</span>
             </a>
-            <a href="#" className="text-zinc-400 hover:text-white transition-colors">
+            <a href="#" onClick={(e) => e.preventDefault()} className="text-zinc-400 hover:text-white transition-colors">
               <Twitter className="w-6 h-6" />
               <span className="sr-only">Twitter</span>
             </a>

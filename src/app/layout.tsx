@@ -18,6 +18,7 @@ export const metadata: Metadata = {
 };
 
 import Footer from "@/components/Footer";
+import Header from "@/components/Header";
 
 export default function RootLayout({
   children,
@@ -29,12 +30,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen flex flex-col`}
       >
-        <header className="flex items-center justify-between p-4 border-b">
-          <div className="text-2xl font-bold">BarberX</div>
-          <a href="#" className="text-sm font-medium hover:underline">
-            Reservar
-          </a>
-        </header>
+        <Header />
         <main className="flex-grow flex flex-col">
           {children}
         </main>
