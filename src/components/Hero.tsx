@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import BookingModal from "@/components/BookingModal";
 
 export default function Hero() {
   return (
@@ -9,9 +10,11 @@ export default function Hero() {
       <p className="text-lg md:text-xl text-zinc-400 mb-8 max-w-2xl">
         Descubre la experiencia definitiva en barbería. Un corte impecable, un ambiente de primera y la atención que mereces.
       </p>
-      <Button size="lg" className="text-base px-8 py-6 font-semibold bg-white text-black hover:bg-zinc-200">
-        Agendar Cita
-      </Button>
+      <BookingModal>
+        <Button size="lg" className="text-base px-8 py-6 font-semibold bg-white text-black hover:bg-zinc-200">
+          Agendar Cita
+        </Button>
+      </BookingModal>
     </section>
   );
 }
