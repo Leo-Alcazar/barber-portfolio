@@ -1,36 +1,42 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# BarberX - Landing Page y Sistema de Reservas
 
-## Getting Started
+![Next.js](https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
+![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
 
-First, run the development server:
+Este es mi proyecto de portafolio para demostrar mis habilidades en el desarrollo Frontend moderno. Construí la página web para una barbería que no solo es visual, sino que incluye un simulador funcional para agendar citas.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+**[Puedes ver el proyecto en vivo aquí](https://barber-portfolio-topaz.vercel.app/)**
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Lo que construí
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+* **Sistema de reservas interactivo:** Un modal donde el usuario puede elegir el tipo de corte, seleccionar al barbero de su preferencia (como Fernando, por ejemplo), y escoger una fecha/hora disponible en un calendario. Toda esta lógica la manejé con el estado de React.
+* **Diseño Responsivo:** Usé Tailwind CSS (específicamente Flexbox y Grid) para asegurar que la galería de cortes y la navegación se adapten perfectamente a celulares y monitores grandes.
+* **Componentes Modulares:** Integré la librería `shadcn/ui` para construir una interfaz limpia y accesible sin tener que reinventar la rueda con cada botón o tarjeta.
+* **Detalles de UX:** Le agregué un header con efecto de cristal (*glassmorphism*) que se queda fijo al hacer scroll, y navegación suave entre las secciones.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Stack Tecnológico
 
-## Learn More
+* **Core:** Next.js, React, TypeScript.
+* **Estilos:** Tailwind CSS.
+* **UI:** shadcn/ui.
+* **Deploy:** Vercel.
 
-To learn more about Next.js, take a look at the following resources:
+## Cómo correrlo localmente
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Si quieres revisar el código en tu máquina:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+1. Clona este repositorio:
+   git clone [https://github.com/TU_USUARIO/barber-portfolio.git](https://github.com/TU_USUARIO/barber-portfolio.git)
+2. Instala las dependencias:
+   npm install
+3. Inicia el servidor de desarrollo:
+   npm run dev
+4. Abre http://localhost:3000 en tu navegador.
 
-## Deploy on Vercel
+    Estructura del Proyecto (Next.js App Router)
+app/: Contiene el enrutador principal, el layout.tsx (estructura base) y la page.tsx (vista principal).
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+components/: Componentes reutilizables creados para la interfaz (Hero.tsx, Gallery.tsx, BookingModal.tsx, etc.).
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+components/ui/: Componentes base instalados e inyectados a través de shadcn/ui.
